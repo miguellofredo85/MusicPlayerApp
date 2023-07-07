@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         seekBar = findViewById(R.id.seekbar);
 
         mediaPlayer = MediaPlayer.create(this, R.raw.memories);
+
+        textViewSongName.setText(getResources().getIdentifier("memories", "raw", getPackageName()));
+
         seekBar.setClickable(false);
 
         btnPlay.setOnClickListener(new View.OnClickListener() {
