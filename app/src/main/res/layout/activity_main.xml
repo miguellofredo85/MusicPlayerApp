@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_shape"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Music Player App"
+        android:textColor="@color/white"
+        android:textFontWeight="@integer/material_motion_duration_medium_2"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="209dp"
+        android:layout_height="215dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/music_logo"
+        android:contentDescription="music logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="409dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:hint="Time:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar" />
+
+    <TextView
+        android:id="@+id/textViewNameSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="name's song"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toEndOf="@+id/textViewTime"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/back_icon"
+        app:layout_constraintEnd_toStartOf="@+id/play"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameSong"
+        app:srcCompat="@drawable/back_icon" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/play_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewTime"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameSong"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/play_arrow" />
+
+    <Button
+        android:id="@+id/pause"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/pause_icon"
+        app:layout_constraintStart_toEndOf="@+id/play"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameSong"
+        app:srcCompat="@drawable/pause_icon" />
+
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/forward_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pause"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNameSong"
+        app:srcCompat="@drawable/forward_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
